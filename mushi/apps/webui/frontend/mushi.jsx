@@ -28,6 +28,8 @@ var Router = Backbone.Router.extend({
         'milestones/:slug' : 'milestone_detail',
         'issues'           : 'issues',
         'issues/:uid'      : 'issue_detail',
+        'comments'         : 'comments'
+        'comments/:uid'    : 'comments_detail''
         'settings'         : 'settings',
         'logout'           : 'logout'
     },
@@ -46,6 +48,13 @@ var Router = Backbone.Router.extend({
     },
     issue_detail: function(uid) {
         this.current = 'issue_detail';
+        this.args = {'uid': uid};
+    },
+    comments: function() {
+        this.current = 'comments';
+    },
+    comment_detail: function(uid) {
+        this.current = 'comment_detail';
         this.args = {'uid': uid};
     },
     settings: function() {
