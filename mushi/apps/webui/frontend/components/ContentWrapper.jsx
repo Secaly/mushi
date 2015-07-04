@@ -20,6 +20,8 @@ var MilestoneListPage = require('./milestones/ListPage');
 var MilestoneDetailPage = require('./milestones/DetailPage');
 var IssueListPage = require('./issues/ListPage');
 var IssueDetailPage = require('./issues/DetailPage');
+var CommentListPage = require('./comments/ListPage');
+var CommentDetailPage = require('./comments/DetailPage');
 var SettingsPage = require('./settings/Page');
 
 var ContentWrapper = React.createClass({
@@ -50,6 +52,12 @@ var ContentWrapper = React.createClass({
         }
         if (this.props.router.current == 'issue_detail') {
             return <IssueDetailPage router={this.props.router} />;
+        }
+        if (this.props.router.current == 'comments') {
+            return <CommentListPage router={this.props.router} />;
+        }
+        if (this.props.router.current == 'comment_detail') {
+            return <CommentDetailPage router={this.props.router} />;
         }
         if (this.props.router.current == 'settings') {
             return <SettingsPage router={this.props.router} />;
