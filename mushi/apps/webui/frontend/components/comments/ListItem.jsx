@@ -55,9 +55,8 @@ var CommentListItem = React.createClass({
                 <div className="mu-comment-content">
                     <div className="mu-comment-meta">
                         <div className="mu-comment-meta-item">
-                            #{this.state.uid} {this.state.last_action} {author} {updated_at} {issue}
+                            #{this.state.uid} {author} {updated_at} {issue}
                         </div>
-                        {tags}
                     </div>
                 </div>
                 <div className="mu-comment-actions">{comment_action}</div>

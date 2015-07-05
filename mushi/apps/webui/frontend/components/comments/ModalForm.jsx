@@ -202,7 +202,6 @@ var CommentModalForm = React.createClass({
             <Modal {...this.props}>
                 <form onSubmit={this.handleSubmit}>
                     <div className="modal-body">
-                        <CommentLabelInput ref="label" value={this.props.label} required />
                         <CommentContentInput ref="content" value={this.props.content} />
                         <CommentAttachmentsInput ref="attachments" thumbnails={this.props.attachments} />
                     </div>

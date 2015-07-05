@@ -125,20 +125,20 @@ var CommentDetail = React.createClass({
             return moment(created_at * 1000).format('MMMM Do YYYY');
         })(this.state.created_at);
 
-        var created_at = (function(created_at) {
-            if (created_at) {
-                return moment(created_at * 1000).format('MMMM Do YYYY');
+        var updated_at = (function(updated_at) {
+            if (updated_at) {
+                return moment(updated_at * 1000).format('MMMM Do YYYY');
             } else {
                 return '-';
             }
-        })(this.state.created_at);
+        })(this.state.updated_at);
 
         return (
             <article className="mu-component mu-comment-wrapper col-md-12">
                 <div className="panel panel-default">
                     <header className="panel-heading clearfix">
                         <div className="pull-left">
-                            <h2>#{this.state.uid} {this.state.label}</h2>
+                            <h2>#{this.state.uid}</h2>
                         </div>
                         <div className="pull-right">
                             <div className="mu-button-wrapper">
