@@ -26,6 +26,7 @@ var CommentListItem = React.createClass({
         return this.props;
     },
 
+    render: function() {
         var issue = (function(issue) {
             if (issue) {
                 return (

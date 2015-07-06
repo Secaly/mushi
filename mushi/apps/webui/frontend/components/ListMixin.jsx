@@ -36,6 +36,12 @@ var ListMixin = {
         pollInterval: React.PropTypes.number
     },
 
+    getDefaultProps: function() {
+            return {
+                predefinedFilters: []
+            };
+        },
+
     getInitialState: function() {
         return {
             items: [],
