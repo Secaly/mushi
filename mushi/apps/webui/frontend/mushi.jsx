@@ -28,8 +28,8 @@ var Router = Backbone.Router.extend({
         'milestones/:slug' : 'milestone_detail',
         'issues'           : 'issues',
         'issues/:uid'      : 'issue_detail',
-        'comments'         : 'comments'
-        'comments/:uid'    : 'comments_detail''
+        'comments'         : 'comments',
+        'comments/:uid'    : 'comments_detail',
         'settings'         : 'settings',
         'logout'           : 'logout'
     },
